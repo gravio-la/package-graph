@@ -1,0 +1,17 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.log
+.turbo/
+*.tsbuildinfo
+
+data/
+public/data/
+generated/
+reviews/
+
+# Documentation markdown — only root README and CLAUDE
+*.md
+!/README.md
+!/CLAUDE.md
