@@ -7,16 +7,16 @@ All data is derived deterministically from the repository (TypeScript compiler A
 ## Usage
 
 ```bash
-# from the repository root
-bun run analyze:packages      # writes apps/package-graph/data/graph.json (+ public/data copy)
-bun run dev:package-graph     # starts the viewer
-bun run analyze:packages:md   # optional: markdown cards in apps/package-graph/generated/
+bun install
+bun run analyze       # writes data/graph.json (+ public/data copy)
+bun run dev           # starts the viewer
+bun run export-md     # optional: markdown cards in generated/
 ```
 
 Coverage is collected separately because it runs every package's test suite:
 
 ```bash
-cd apps/package-graph && bun run analyze:coverage
+bun run analyze:coverage
 ```
 
 The generated data (`data/`, `public/data/`, `generated/`) isn't committed. Run the analyzer after checkout.
